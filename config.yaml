@@ -1,0 +1,9 @@
+# Copyright 2022 Canonical Ltd.
+# See LICENSE file for licensing details.
+
+options:
+  sides:
+    description: |
+      Number of sides of the dice.
+    type: integer
+    default: 6

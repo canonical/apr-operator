@@ -1,0 +1,48 @@
+# Copyright 2021 Canonical Ltd.
+# See LICENSE file for licensing details.
+
+# Copyright 2021 Canonical Ltd.
+# See LICENSE file for licensing details.
+
+name: smut
+
+description: Smut operator.
+summary: This is a smut operator.
+maintainers:
+    - Pietro Pasotti <pietro.pasotti@canonical.com>
+
+website: https://charmhub.io/smut-operator
+
+#subordinate: false
+series:
+  - jammy
+  - focal
+
+containers:
+  agent:
+    resource: image
+    mounts:
+      - storage: data
+        location: /tmp/agent/data
+
+resources:
+  image:
+    type: oci-image
+    upstream-source: python:slim-buster
+    description: OCI image for Smut Operator
+
+storage:
+  data:
+    type: filesystem
+
+requires:
+#  juju-info:
+#    interface: juju-info
+#    scope: container
+
+  logging-consumer:
+    interface: loki_push_api
+
+peers:
+  cluster:
+    interface: smut_replicas

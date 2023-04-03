@@ -6,23 +6,23 @@
 """A  juju charm for Grafana Agent on Kubernetes."""
 import logging
 
-from smut_charm import SmutCharm
+from apr_charm import AprCharm
 
 logger = logging.getLogger(__name__)
 
-SMUT_CONFIG = "/var/smut/smut.cfg"
-SMUT_LOGS = "/log/smut.log"
+SMUT_CONFIG = "/var/apr/apr.cfg"
+SMUT_LOGS = "/log/apr.log"
 
 
-class SmutMachineCharm(SmutCharm):
-    """Machine version of the Smut charm."""
+class AprMachineCharm(AprCharm):
+    """Machine version of the Apr charm."""
 
     def __init__(self, *args):
         super().__init__(*args)
 
     def install(self) -> None:
-        """Install the smut software."""
+        """Install the apr software."""
 
     def start(self) -> None:
-        """Start the smut software."""
+        """Start the apr software."""
 

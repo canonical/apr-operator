@@ -32,13 +32,13 @@ if __name__ == "__main__":
 
     _sub = get_substrate()
     if _sub == 'machine':
-        from machine_charm import SmutMachineCharm
+        from machine_charm import AprMachineCharm
 
         logger.info('starting up machine charm')
-        main(SmutMachineCharm)
+        main(AprMachineCharm)
     elif _sub == 'k8s':
-        from k8s_charm import SmutK8sCharm
+        from k8s_charm import AprK8sCharm
 
         logger.info('starting up k8s charm')
-        main(SmutK8sCharm)
+        main(AprK8sCharm)
     raise TypeError(_sub)

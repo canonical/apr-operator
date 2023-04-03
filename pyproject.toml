@@ -2,7 +2,7 @@
 # See LICENSE file for licensing details.
 
 [project]
-name = "smut-operator"
+name = "apr-operator"
 dependencies = [
     "ops>=2.0",
     "pydantic",

@@ -1,14 +1,14 @@
 # Copyright 2021 Canonical Ltd.
 # See LICENSE file for licensing details.
 
-name: smut
+name: apr
 
-description: Smut operator.
-summary: This is a smut operator.
+description: Apr operator.
+summary: This is a apr operator.
 maintainers:
     - Pietro Pasotti <pietro.pasotti@canonical.com>
 
-website: https://charmhub.io/smut-operator
+website: https://charmhub.io/apr-operator
 
 #subordinate: false
 series:
@@ -25,4 +25,4 @@ requires:
 
 peers:
   cluster:
-    interface: smut_replicas
+    interface: apr_replicas

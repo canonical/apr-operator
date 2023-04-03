@@ -1,5 +1,5 @@
-# Smut Operator
-This charm deploys and operates `smut`, a tiny dice-rolling fastapi server.
+# Apr Operator
+This charm deploys and operates `apr`, a tiny dice-rolling fastapi server.
 
 It's obviously not about the workload.
 

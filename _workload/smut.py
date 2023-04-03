@@ -30,14 +30,14 @@ def serve(cfg: Dict):
     run(app, host="0.0.0.0")
 
 
-def smut():
+def apr():
     cfg = SMUT_CONFIG
     if not cfg.exists():
-        raise RuntimeError('config not found, cannot smut.')
+        raise RuntimeError('config not found, cannot apr.')
     parsed_cfg = json.loads(cfg.read_text())
     logger.debug(f'found cfg at {cfg}')
     serve(parsed_cfg)
 
 
 if __name__ == '__main__':
-    smut()
+    apr()

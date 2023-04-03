@@ -1,5 +1,5 @@
 groups:
-  - name: smut-operator-high-log-volume
+  - name: apr-operator-high-log-volume
     rules:
       - alert: HighLogVolume
         expr: |

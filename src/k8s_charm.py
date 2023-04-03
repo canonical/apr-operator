@@ -10,8 +10,8 @@ from apr_charm import AprCharm
 
 logger = logging.getLogger(__name__)
 
-SMUT_CONFIG = "/apr.cfg"
-SMUT_LOGS = "/apr.log"
+APR_CONFIG = "/apr.cfg"
+APR_LOGS = "/apr.log"
 
 
 class AprK8sCharm(AprCharm):

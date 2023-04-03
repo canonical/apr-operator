@@ -25,4 +25,3 @@ class AprMachineCharm(AprCharm):
 
     def start(self) -> None:
         """Start the apr software."""
-

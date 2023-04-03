@@ -8,7 +8,7 @@ from typing import Any, Dict, Tuple, Type
 
 from ops.charm import CharmBase
 from ops.framework import Framework
-from ops.model import MaintenanceStatus, ErrorStatus, ActiveStatus
+from ops.model import ActiveStatus, ErrorStatus, MaintenanceStatus
 from requests.packages.urllib3.util import Retry  # type: ignore
 
 from src.apr import Apr
@@ -35,13 +35,15 @@ class AprCharm(CharmBase):
     def apr(self):
         if not self._apr:
             self._apr = Apr(
-                sides=int(self.config.get('sides')),
+                sides=int(self.config.get("sides")),
                 is_up=self._is_apr_up(),
             )
         return self._apr
 
     @contextmanager
-    def safe_yield(self, maintenance_message: str, catch: Tuple[Type[Exception]] = (Exception,)) -> bool:
+    def safe_yield(
+        self, maintenance_message: str, catch: Tuple[Type[Exception]] = (Exception,)
+    ) -> bool:
         self.unit.status = MaintenanceStatus(maintenance_message)
         try:
             yield
